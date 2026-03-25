@@ -1,0 +1,360 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(238, 108, 77, 0.18), transparent 26%),
+    radial-gradient(circle at 85% 20%, rgba(30, 132, 127, 0.2), transparent 24%),
+    linear-gradient(180deg, #fcf7ef 0%, #f3eadb 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  margin: 0 auto;
+  padding: 20px 58px;
+}
+
+.deskbar{
+  position: sticky;
+  top: 16px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  margin-bottom: 26px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(252, 247, 239, 0.72);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 40px rgba(87, 65, 39, 0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f7a072);
+  color: #fff;
+  font-family: "Syne", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.brand p {
+  margin: 3px 0 0;
+  font-size: 0.86rem;
+  color: #655d56;
+}
+
+.nav-site{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-site a {
+  padding: 12px 16px;
+  border-radius: 999px;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.nav-site a:hover,
+.nav-site a:focus-visible {
+  background: rgba(28, 26, 24, 0.06);
+  transform: translateY(-1px);
+}
+
+.nav-cta {
+  background: black;
+  color: #fff;
+} 
+
+.menu {
+  display: none;
+  border: 0;
+  background: transparent;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.menu span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 5px auto;
+  background: var(--text);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+main{
+  padding: 10px 0 38px;
+}
+
+.hero{
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+}
+
+.title-hero{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #1E847F;
+}
+
+.hero1 h1{
+  margin: 0;
+  max-width: 10ch;
+  font-size: clamp(3rem, 7vw, 6.4rem);
+  line-height: 0.85;
+  animation: rise-in 0.9s ease both;
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.text-hero{
+  color: #655d56;
+  margin: 40px 0 0;
+  max-width: 580px;
+}
+
+.hero-actions, .hero-metrics{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-actions{
+  margin: 34px 0 0;
+}
+
+.hero-actions a{
+  border-radius: 50px;
+  padding: 15px 22px;
+}
+
+.button-primary{
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+}
+
+.button-second{
+  border: 1px solid;
+  border-color: rgba(28, 26, 24, 0.12);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.hero-metrics{
+  margin: 40px 0 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.hero-metrics li{
+  border: 1px solid;
+  border-color: rgba(28, 26, 24, 0.12);
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  padding: 20px 10px 20px;
+}
+
+.hero-metrics li span, strong{
+  display: block;
+  font-size: larger;
+  
+}
+
+.hero-metrics li strong{
+  font-size: 30px;
+}
+
+.hero-metrics li span{
+  color: #655d56;
+}
+
+.proj-heading p{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #1E847F;
+}
+
+.proj-heading h2{
+  margin: 0;
+  max-width: 20ch;
+  font-size: clamp(3rem, 4vw, 6.4rem);
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.proj-front1{
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px 0px;
+  gap: 40px;
+}
+
+.proj-front1 article{
+  border: 1px solid ;
+  border-color: rgba(28, 26, 24, 0.12);
+  border-radius: 30px;
+  padding: 20px 30px 60px;
+  background: linear-gradient(180deg, rgba(238, 108, 77, 0.22), rgba(255, 255, 255, 0.72));
+}
+
+.proj-front1 article span{
+  display: flex;
+  justify-content: center;
+  background-color: #1c1a180f;
+  padding: 5px;
+  border-radius: 30px;
+}
+
+.proj-front1 article h3{
+  font: 32px Syne, sans-serif;
+}
+
+.proj-front1 article a{
+  position: relative;
+  font-weight: bolder;
+}
+
+.services{
+  margin: 40px 0;
+}
+
+.serv-heading p{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #1E847F;
+}
+
+.serv-heading h2{
+  margin: 0;
+  max-width: 20ch;
+  font-size: clamp(3rem, 4vw, 6.4rem);
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.serv-grid{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0 30px;
+}
+
+.serv-grid article{
+  border: 1px solid ;
+  border-color: rgba(28, 26, 24, 0.12);
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 30px;
+  padding: 20px 30px 30px;
+}
+
+.serv-grid article h3{
+  font: 20px Syne, sans-serif;
+}
+
+.serv-grid article p{
+  color: #655d56;
+}
+
+.about-painel{
+  display: flex;
+  align-items: center;
+  gap: 168px;
+  border: 1px solid;
+  border-radius: 30px;
+  border-color: rgba(28, 26, 24, 0.12);
+  background: rgba(255, 255, 255, 0.45);
+  padding:20px;
+}
+
+.about-painel p {
+  max-width: 38vw;
+  color: #655d56;
+}
+
+.about-painel-one p{
+  font-weight: bold;
+}
+
+.about-painel-one h2{
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 6.4rem);
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.contact-card{
+  display: flex;
+  align-items: center;
+  gap: 168px;
+  border: 1px solid;
+  border-radius: 30px;
+  border-color: rgba(28, 26, 24, 0.12);
+  background: rgba(255, 255, 255, 0.45);
+  padding:20px;
+}
+
+.contact{
+  margin: 30px 0;
+}
+
+.contact-card p{
+  font-weight: bold;
+  color: #655d56;
+}
+
+.contact-card h2{
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 6.4rem);
+  font-family: "Syne", sans-serif;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.contact-card a{
+  padding: 10px;
+  border-radius: 30px;
+}
