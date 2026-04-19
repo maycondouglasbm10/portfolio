@@ -1,18 +1,17 @@
-// Menu Mobile
-const menuButton = document.querySelector('.menu');
-const navSite = document.querySelector('.nav-site');
-const navLinks = document.querySelectorAll('.nav-site a');
+const menu = document.querySelector(".menu");
+const nav = document.querySelector(".nav");
+const links = document.querySelectorAll(".nav-list a");
 
-// Toggle do menu ao clicar no botão hamburger
-menuButton.addEventListener('click', () => {
-  menuButton.classList.toggle('active');
-  navSite.classList.toggle('active');
+// abre e fecha menu ao clicar no ícone
+menu.addEventListener("click", () => {
+    menu.classList.toggle("active"); // transforma em X
+    nav.classList.toggle("active");  // abre/fecha menu
 });
 
-// Fechar menu ao clicar em um link
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    menuButton.classList.remove('active');
-    navSite.classList.remove('active');
-  });
+// fecha menu ao clicar em um link
+links.forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        nav.classList.remove("active");
+    });
 });
