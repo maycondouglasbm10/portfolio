@@ -524,11 +524,19 @@ main{
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   text-align: center;
+  
 }
 
 .contatos-links i{
   font-size: 25px;
   margin-right: 15px;
+  
+}
+
+.mail-phone, .lnkdn-Git{
+  border-radius: 30px;
+  background: var(--cor-secondary);
+  padding:20px 20px 60px;
 }
 
 .footer{
